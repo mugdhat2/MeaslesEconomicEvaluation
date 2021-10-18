@@ -74,7 +74,6 @@
         }
       }
     },
-    ,
     {
       "id":"participateInHomeQuarantineGlobal",
       "ann:label":"All nodes which participate in voluntary home quarantine.",
@@ -546,7 +545,7 @@
           ]
         }
       }
-    },,
+    },
     {
       "$comment":"Select Participants for voluntary Home Isolation",
       "id":"intervention_VHI_select",
