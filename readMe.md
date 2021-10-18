@@ -1,3 +1,5 @@
-vhi: voluntary home isolation
+EpiHiper model input for Measles
 
-vhq: voluntary home quarantine
+vhi: voluntary home isolation (for 7 days)
+
+vhq: voluntary home quarantine (for 21 days)
