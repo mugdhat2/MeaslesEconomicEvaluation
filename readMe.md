@@ -1,4 +1,4 @@
-<h2>EpiHiper model input for Measles<\h2>
+<h2>EpiHiper model input for Measles</h2>
 
 vhi: voluntary home isolation (for 7 days)
 
