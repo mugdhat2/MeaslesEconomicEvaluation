@@ -1,0 +1,426 @@
+{
+    "epiHiperSchema": "https://github.com/NSSAC/EpiHiper-Schema/blob/master/schema/initializationSchema.json",
+    "sets": [
+        {
+            "id": "vax",
+            "scope": "local",
+            "content":{
+                "elementType": "node",
+                "scope": "local",
+                "left": {"field": "vacc_status"},
+                "operator": "==",
+                "right": {"value": "1"}
+            }
+        },
+        {
+            "id": "unvax",
+            "scope": "local",
+            "content":{
+                "elementType": "node",
+                "scope": "local",
+                "left": {"field": "vacc_status"},
+                "operator": "==",
+                "right": {"value": "0"}
+            }
+        },
+        {
+            "id": "agegroup_p",
+            "scope": "local",
+            "content": {
+                "elementType": "node",
+                "scope": "local",
+                "left": {"field": "age_group"},
+                "operator": "==",
+                "right": {"value": "p"}
+            }
+        },
+        {
+            "id": "agegroup_s",
+            "scope": "local",
+            "content": {
+                "elementType": "node",
+                "scope": "local",
+                "left": {"field": "age_group"},
+                "operator": "==",
+                "right": {"value": "s"}
+            }
+        },
+        {
+            "id": "agegroup_a",
+            "scope": "local",
+            "content": {
+                "elementType": "node",
+                "scope": "local",
+                "left": {"field": "age_group"},
+                "operator": "==",
+                "right": {"value": "a"}
+            }
+        },
+        {
+            "id": "agegroup_o",
+            "scope": "local",
+            "content": {
+                "elementType": "node",
+                "scope": "local",
+                "left": {"field": "age_group"},
+                "operator": "==",
+                "right": {"value": "o"}
+            }
+        },
+        {
+            "id": "agegroup_g",
+            "scope": "local",
+            "content": {
+                "scope": "local",
+                "elementType": "node",
+                "left": {"field": "age_group"},
+                "operator": "==",
+                "right": {"value": "g"}
+            }
+        },
+        {
+      "id": "vax_p",
+      "ann:label": "Vaccinated preschool",
+      "scope": "local",
+      "content": {
+        "operation": "intersection",
+        "sets": [
+          {
+            "set": {"idRef": "vax"}
+          },
+          {
+            "set": {"idRef": "agegroup_p"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "vax_s",
+      "ann:label": "Vaccinated school",
+      "scope": "local",
+      "content": {
+        "operation": "intersection",
+        "sets": [
+          {
+            "set": {"idRef": "vax"}
+          },
+          {
+            "set": {"idRef": "agegroup_s"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "unvax_p",
+      "ann:label": "Unvaccinated preschool",
+      "scope": "local",
+      "content": {
+        "operation": "intersection",
+        "sets": [
+          {
+            "set": {"idRef": "unvax"}
+          },
+          {
+            "set": {"idRef": "agegroup_p"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "unvax_s",
+      "ann:label": "Unvaccinated school",
+      "scope": "local",
+      "content": {
+        "operation": "intersection",
+        "sets": [
+          {
+            "set": {"idRef": "unvax"}
+          },
+          {
+            "set": {"idRef": "agegroup_s"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "vax_a",
+      "ann:label": "Vaccinated adult",
+      "scope": "local",
+      "content": {
+        "operation": "intersection",
+        "sets": [
+          {
+            "set": {"idRef": "vax"}
+          },
+          {
+            "set": {"idRef": "agegroup_a"}
+          }
+        ]
+      }
+    },
+    {
+      "id": "unvax_a",
+      "ann:label": "Unvaccinated adult",
+      "scope": "local",
+      "content": {
+        "operation": "intersection",
+        "sets": [
+          {
+            "set": {"idRef": "unvax"}
+          },
+          {
+            "set": {"idRef": "agegroup_a"}
+          }
+        ]
+      }
+    }
+    ],
+    "initializations": [
+        {
+            "target": {
+              "set": {"idRef": "vax_p"}   
+            },
+            "foreach":[
+                {
+                    "delay": 0,
+                    "operations":[
+                        {
+                            "target": {
+                                "node": {"property": "healthState"}
+                            },
+                            "operator": "=",
+                            "value": {"healthState": "V_p"}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "target": {
+                "set": {"idRef": "unvax_p"}
+            },
+            
+            "sampling": {
+                "type": "absolute",
+                "number": 0,
+                "sampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {"property": "healthState"}
+                                    },
+                                    "operator": "=",
+                                    "value": {"healthState": "E_p"}
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nonsampled": {
+                    
+                            "foreach": [
+                                {
+                                    "delay": 0,
+                                    "operations": [
+                                        {
+                                            "target": {
+                                                "node": {"property": "healthState"}
+                                            },
+                                            "operator": "=",
+                                            "value": {"healthState": "S_p"}
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+            
+        },
+        {
+            "target": {
+              "set": {"idRef": "vax_s"}   
+            },
+            "foreach":[
+                {
+                    "delay": 0,
+                    "operations":[
+                        {
+                            "target": {
+                                "node": {"property": "healthState"}
+                            },
+                            "operator": "=",
+                            "value": {"healthState": "V_s"}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "target": {
+                "set": {"idRef": "unvax_s"}
+            },
+            
+            "sampling": {
+                "type": "absolute",
+                "number": 1,
+                "sampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {"property": "healthState"}
+                                    },
+                                    "operator": "=",
+                                    "value": {"healthState": "E_s"}
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nonsampled": {
+                    
+                            "foreach": [
+                                {
+                                    "delay": 0,
+                                    "operations": [
+                                        {
+                                            "target": {
+                                                "node": {"property": "healthState"}
+                                            },
+                                            "operator": "=",
+                                            "value": {"healthState": "S_s"}
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+            
+        },
+        {
+            "target": {
+              "set": {"idRef": "vax_a"}   
+            },
+            "foreach":[
+                {
+                    "delay": 0,
+                    "operations":[
+                        {
+                            "target": {
+                                "node": {"property": "healthState"}
+                            },
+                            "operator": "=",
+                            "value": {"healthState": "V_a"}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "target": {
+              "set": {"idRef": "unvax_a"}   
+            },
+            "foreach":[
+                {
+                    "delay": 0,
+                    "operations":[
+                        {
+                            "target": {
+                                "node": {"property": "healthState"}
+                            },
+                            "operator": "=",
+                            "value": {"healthState": "S_a"}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "target": {
+                "set": {"idRef": "agegroup_o"}
+            },
+            "sampling": {
+                "type": "absolute",
+                "number": 0,
+                "sampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {"property": "healthState"}
+                                    },
+                                    "operator": "=",
+                                    "value": {"healthState": "E_o"}
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nonsampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {"property": "healthState"}
+                                    },
+                                    "operator": "=",
+                                    "value": {"healthState": "V_o"}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "target": {
+                "set": {"idRef": "agegroup_g"}
+            },
+            "sampling": {
+                "type": "absolute",
+                "number": 0,
+                "sampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {"property": "healthState"}
+                                    },
+                                    "operator": "=",
+                                    "value": {"healthState": "E_g"}
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nonsampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {"property": "healthState"}
+                                    },
+                                    "operator": "=",
+                                    "value": {"healthState": "V_g"}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
