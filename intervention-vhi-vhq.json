@@ -547,61 +547,6 @@
       }
     },
     {
-      "$comment":"Select Participants for voluntary Home Isolation",
-      "id":"intervention_VHI_select",
-      "target":{
-        "set":{
-          "idRef":"nodesenteredIsymp"
-        }
-      },
-      "sampling":{
-        "type":"individual",
-        "number":75,
-        "sampled":{
-          "foreach":[
-            {
-              "delay":0,
-              "operations":[
-                {
-                  "target":{
-                    "node":{
-                      "property":"nodeTrait",
-                      "feature":"participateInHomeIsolation"
-                    }
-                  },
-                  "operator":"=",
-                  "value":{
-                    "trait":"nodeTrait",
-                    "feature":"participateInHomeIsolation",
-                    "enum":"true"
-                  }
-                }
-              ]
-            },
-            {
-              "delay":1,
-              "operations":[
-                {
-                  "target":{
-                    "node":{
-                      "property":"nodeTrait",
-                      "feature":"participateInHomeIsolation"
-                    }
-                  },
-                  "operator":"=",
-                  "value":{
-                    "trait":"nodeTrait",
-                    "feature":"participateInHomeIsolation",
-                    "enum":"false"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    {
       "$comment":"Select Participants for voluntary Home Quarantine",
       "id":"intervention_VHQ_select",
       "target":{
