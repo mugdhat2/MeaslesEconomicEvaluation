@@ -31,6 +31,10 @@
                         {
                             "id": "false",
                             "ann:label": "false"
+                        },
+                        {
+                            "id": "participating",
+                            "ann:label": "participating"
                         }
                     ],
                     "default": "false"
@@ -46,6 +50,10 @@
                         {
                             "id": "false",
                             "ann:label": "false"
+                        },
+                        {
+                            "id": "participating",
+                            "ann:label": "participating"
                         }
                     ],
                     "default": "false"
