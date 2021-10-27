@@ -537,6 +537,25 @@
                   "value":{
                     "trait":"nodeTrait",
                     "feature":"participateInHomeIsolation",
+                    "enum":"participating"
+                  }
+                }
+              ]
+            },
+            {
+              "delay":10,
+              "operations":[
+                {
+                  "target":{
+                    "node":{
+                      "property":"nodeTrait",
+                      "feature":"participateInHomeIsolation"
+                    }
+                  },
+                  "operator":"=",
+                  "value":{
+                    "trait":"nodeTrait",
+                    "feature":"participateInHomeIsolation",
                     "enum":"false"
                   }
                 }
@@ -580,6 +599,25 @@
             },
             {
               "delay":1,
+              "operations":[
+                {
+                  "target":{
+                    "node":{
+                      "property":"nodeTrait",
+                      "feature":"participateInHomeQuarantine"
+                    }
+                  },
+                  "operator":"=",
+                  "value":{
+                    "trait":"nodeTrait",
+                    "feature":"participateInHomeQuarantine",
+                    "enum":"participating"
+                  }
+                }
+              ]
+            },
+            {
+              "delay":24,
               "operations":[
                 {
                   "target":{
@@ -714,7 +752,7 @@
           ]
         },
         {
-          "delay":21,
+          "delay":24,
           "operations":[
             {
               "target":{
