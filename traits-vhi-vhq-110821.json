@@ -1,0 +1,95 @@
+{
+    "epiHiperSchema": "https://github.com/NSSAC/EpiHiper-Schema/blob/master/schema/traitsSchema.json",
+    "traits": [
+        {
+            "id": "nodeTrait",
+            "ann:label": "Node Trait",
+            "features": [
+                {
+                    "id": "enteredIsymp",
+                    "ann:label": "Entered State Isymp",
+                    "enums": [
+                        {
+                            "id": "true",
+                            "ann:label": "true"
+                        },
+                        {
+                            "id": "false",
+                            "ann:label": "false"
+                        }
+                    ],
+                    "default": "false"
+                },
+                {
+                    "id": "stayhome",
+                    "ann:label": "will stay home",
+                    "enums": [
+                        {
+                            "id": "false",
+                            "ann:label": "false"
+                        },
+                        {
+                            "id": "selected_for_isolation",
+                            "ann:label": "selected for isolation"
+                        },
+                        {
+                            "id": "waiting_for_isolation",
+                            "ann:label": "waiting for isolation"
+                        },
+                        {
+                            "id": "in_isolation",
+                            "ann:label": "in isolation"
+                        },
+                        {
+                            "id": "selected_for_quarantine",
+                            "ann:label": "selected for quarantine"
+                        },
+                        {
+                            "id": "in_quarantine",
+                            "ann:label": "in quarantine"
+                        }
+                    ],
+                    "default": "false"
+                },
+                {
+                    "id": "participateInHomeIsolation",
+                    "ann:label": "will stay home",
+                    "enums": [
+                        {
+                            "id": "true",
+                            "ann:label": "true"
+                        },
+                        {
+                            "id": "false",
+                            "ann:label": "false"
+                        },
+                        {
+                            "id": "participating",
+                            "ann:label": "participating"
+                        }
+                    ],
+                    "default": "false"
+                },
+                {
+                    "id": "participateInHomeQuarantine",
+                    "ann:label": "will stay home",
+                    "enums": [
+                        {
+                            "id": "true",
+                            "ann:label": "true"
+                        },
+                        {
+                            "id": "false",
+                            "ann:label": "false"
+                        },
+                        {
+                            "id": "participating",
+                            "ann:label": "participating"
+                        }
+                    ],
+                    "default": "false"
+                }
+            ]
+        }
+    ]
+}
