@@ -47,6 +47,10 @@
                         {
                             "id": "in_quarantine",
                             "ann:label": "in quarantine"
+                        },
+                        {
+                            "id": "not_available",
+                            "ann:label": "not available or chose not to quarantine"
                         }
                     ],
                     "default": "false"
