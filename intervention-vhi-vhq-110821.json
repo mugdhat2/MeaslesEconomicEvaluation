@@ -279,14 +279,7 @@
         ] 
           },
           {
-              "scope": "local",
-                  "elementType" : "node",
-                  "operator": "withIncomingEdgeIn",
-                  "selector": {
-                      "set": {
-                          "idRef": "homeEdges"
-                      }
-                  }
+              "set": {"idRef": "homeEdges"}
           }
       ]
         
