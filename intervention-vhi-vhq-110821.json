@@ -602,6 +602,25 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "delay": 21,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "false"
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }
