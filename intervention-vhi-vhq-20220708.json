@@ -1,0 +1,762 @@
+{
+    "epiHiperSchema": "https://github.com/NSSAC/EpiHiper-Schema/blob/master/schema/interventionSchema.json",
+    "sets": [
+        {
+            "id": "nodesenteredIsymp",
+            "ann:label": "Nodes which entered state Isymp.",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "elementType": "node",
+                        "scope": "local",
+                        "left": {
+                            "node": {"property": "healthState"}
+                        },
+                        "operator": "withPropertyIn",
+                        "right": {
+                            "valueList": {
+                                "healthState": [
+                                    "Isymp_p",
+                                    "Isymp_s",
+                                    "Isymp_a",
+                                    "Isymp_o",
+                                    "Isymp_g"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "elementType": "node",
+                        "scope": "local",
+                        "left": {
+                            "node": {
+                                "property": "nodeTrait",
+                                "feature": "enteredIsymp"
+                            }
+                        },
+                        "operator": "==",
+                        "right": {
+                            "value": {
+                                "trait": "nodeTrait",
+                                "feature": "enteredIsymp",
+                                "enum": "false"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "participateInHomeIsolationGlobal",
+            "ann:label": "All nodes which participate in voluntary home isolation.",
+            "scope": "global",
+            "content": {
+                "elementType": "node",
+                "scope": "global",
+                "left": {
+                    "node": {
+                        "property": "nodeTrait",
+                        "feature": "stayhome"
+                    }
+                },
+                "operator": "==",
+                "right": {
+                    "value": {
+                        "trait": "nodeTrait",
+                        "feature": "stayhome",
+                        "enum": "selected_for_isolation"
+                    }
+                }
+            }
+        },
+        {
+            "id": "participateInHomeQuarantineGlobal",
+            "ann:label": "All nodes which participate in voluntary home quarantine.",
+            "scope": "global",
+            "content": {
+                "elementType": "node",
+                "scope": "global",
+                "left": {
+                    "node": {
+                        "property": "nodeTrait",
+                        "feature": "stayhome"
+                    }
+                },
+                "operator": "==",
+                "right": {
+                    "value": {
+                        "trait": "nodeTrait",
+                        "feature": "stayhome",
+                        "enum": "selected_for_quarantine"
+                    }
+                }
+            }
+        },
+        {
+            "id": "nonHomeEdgesTarget",
+            "scope": "local",
+            "content": {
+                "elementType": "edge",
+                "left": {
+                    "edge": {
+                        "property": "targetActivity",
+                        "feature": "activityType"
+                    }
+                },
+                "operator": "!=",
+                "right": {
+                    "value": {
+                        "trait": "activityTrait",
+                        "feature": "activityType",
+                        "enum": "home"
+                    }
+                }
+            }
+        },
+        {
+            "id": "homeEdges",
+            "scope": "local",
+            "content": {
+                "operation": "union",
+                "sets": [
+                    {
+                        "scope": "local",
+                        "elementType": "edge",
+                        "left": {
+                            "edge": {
+                                "property": "targetActivity",
+                                "feature": "activityType"
+                            }
+                        },
+                        "operator": "==",
+                        "right": {
+                            "value": {
+                                "trait": "activityTrait",
+                                "feature": "activityType",
+                                "enum": "home"
+                            }
+                        }
+                    },
+                    {
+                        "scope": "local",
+                        "elementType": "edge",
+                        "left": {
+                            "edge": {
+                                "property": "sourceActivity",
+                                "feature": "activityType"
+                            }
+                        },
+                        "operator": "==",
+                        "right": {
+                            "value": {
+                                "trait": "activityTrait",
+                                "feature": "activityType",
+                                "enum": "home"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "targetNodeParticipateInHomeIsolation",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "scope": "local",
+                        "elementType": "edge",
+                        "operator": "withTargetNodeIn",
+                        "selector": {
+                            "set": {"idRef": "participateInHomeIsolationGlobal"}
+                        }
+                    },
+                    {
+                        "set": {"idRef": "nonHomeEdgesTarget"}
+                    }
+                ]
+            }
+        },
+        {
+            "id": "sourceNodeParticipateInHomeIsolation",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "elementType": "edge",
+                        "operator": "withSourceNodeIn",
+                        "selector": {
+                            "set": {"idRef": "participateInHomeIsolationGlobal"}
+                        }
+                    },
+                    {
+                        "set": {"idRef": "nonHomeEdgesTarget"}
+                    }
+                ]
+            }
+        },
+        {
+            "id": "householdNodesOfIsolators",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "scope": "local",
+                        "elementType": "node",
+                        "operator": "withIncomingEdgeIn",
+                        "selector": {
+                            "set": {"idRef": "isolatorsHomeEdges"}
+                        }
+                    },
+                    {
+                        "elementType": "node",
+                        "scope": "local",
+                        "left": {
+                            "node": {
+                                "property": "nodeTrait",
+                                "feature": "stayhome"
+                            }
+                        },
+                        "operator": "==",
+                        "right": {
+                            "value": {
+                                "trait": "nodeTrait",
+                                "feature": "stayhome",
+                                "enum": "false"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "isolatorsHomeEdges",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "operation": "union",
+                        "sets": [
+                            {
+                                "scope": "local",
+                                "elementType": "edge",
+                                "operator": "withTargetNodeIn",
+                                "selector": {
+                                    "set": {"idRef": "participateInHomeIsolationGlobal"}
+                                }
+                            },
+                            {
+                                "scope": "local",
+                                "elementType": "edge",
+                                "operator": "withSourceNodeIn",
+                                "selector": {
+                                    "set": {"idRef": "participateInHomeIsolationGlobal"}
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "scope": "local",
+                        "elementType": "node",
+                        "operator": "withIncomingEdgeIn",
+                        "selector": {
+                            "set": {"idRef": "homeEdges"}
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "targetNodeParticipateInHomeQuarantine",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "scope": "local",
+                        "elementType": "edge",
+                        "operator": "withTargetNodeIn",
+                        "selector": {
+                            "set": {"idRef": "participateInHomeQuarantineGlobal"}
+                        }
+                    },
+                    {
+                        "set": {"idRef": "nonHomeEdgesTarget"}
+                    }
+                ]
+            }
+        },
+        {
+            "id": "sourceNodeParticipateInHomeQuarantine",
+            "scope": "local",
+            "content": {
+                "operation": "intersection",
+                "sets": [
+                    {
+                        "elementType": "edge",
+                        "operator": "withSourceNodeIn",
+                        "selector": {
+                            "set": {"idRef": "participateInHomeQuarantineGlobal"}
+                        }
+                    },
+                    {
+                        "set": {"idRef": "nonHomeEdgesTarget"}
+                    }
+                ]
+            }
+        }
+    ],
+    "triggers": [
+        {
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "nodesenteredIsymp"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "interventionIds": ["intervention_VHI_select"]
+        },
+        {
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "householdNodesOfIsolators"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "interventionIds": ["intervention_VHQ_select"]
+        },
+        {
+            "ann:id": "voluntaryHomeIsolationSelf",
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "targetNodeParticipateInHomeIsolation"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "interventionIds": ["intervention_VHI1"]
+        },
+        {
+            "ann:id": "voluntaryHomeIsolationContacts",
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "sourceNodeParticipateInHomeIsolation"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "interventionIds": ["intervention_VHI2"]
+        },
+        {
+            "ann:id": "voluntaryHomeQuarantineSelf",
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "targetNodeParticipateInHomeQuarantine"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "interventionIds": ["intervention_VHQ1"]
+        },
+        {
+            "ann:id": "voluntaryHomeQuarantineContacts",
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "sourceNodeParticipateInHomeQuarantine"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "interventionIds": ["intervention_VHQ2"]
+        }
+    ],
+    "interventions": [
+        {
+            "$comment": "Mark individual as having entered previously",
+            "trigger": {
+                "left": {
+                    "sizeof": {
+                        "set": {"idRef": "nodesenteredIsymp"}
+                    }
+                },
+                "operator": ">",
+                "right": {
+                    "value": {"number": 0}
+                }
+            },
+            "target": {
+                "set": {"idRef": "nodesenteredIsymp"}
+            },
+            "foreach": [
+                {
+                    "operations": [
+                        {
+                            "target": {
+                                "node": {
+                                    "property": "nodeTrait",
+                                    "feature": "enteredIsymp"
+                                }
+                            },
+                            "operator": "=",
+                            "value": {
+                                "trait": "nodeTrait",
+                                "feature": "enteredIsymp",
+                                "enum": "true"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$comment": "Select Participants for voluntary Home Isolation",
+            "id": "intervention_VHI_select",
+            "target": {
+                "set": {"idRef": "nodesenteredIsymp"}
+            },
+            "sampling": {
+                "type": "individual",
+                "number": 75,
+                "sampled": {
+                    "foreach": [
+                        {
+                            "delay": 2,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "selected_for_isolation"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "delay": 3,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "in_isolation"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "delay": 10,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "false"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$comment": "Select Participants for voluntary Home Quarantine",
+            "id": "intervention_VHQ_select",
+            "target": {
+                "set": {"idRef": "householdNodesOfIsolators"}
+            },
+            "sampling": {
+                "type": "individual",
+                "number": 75,
+                "sampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "selected_for_quarantine"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "delay": 1,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "in_quarantine"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "delay": 21,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "false"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "unsampled": {
+                    "foreach": [
+                        {
+                            "delay": 0,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "not_available"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "delay": 21,
+                            "operations": [
+                                {
+                                    "target": {
+                                        "node": {
+                                            "property": "nodeTrait",
+                                            "feature": "stayhome"
+                                        }
+                                    },
+                                    "operator": "=",
+                                    "value": {
+                                        "trait": "nodeTrait",
+                                        "feature": "stayhome",
+                                        "enum": "false"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$comment": "Voluntary Home Isolation (self)",
+            "id": "intervention_VHI1",
+            "target": {
+                "set": {"idRef": "targetNodeParticipateInHomeIsolation"}
+            },
+            "foreach": [
+                {
+                    "delay": 3,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "/=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                },
+                {
+                    "delay": 10,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "*=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$comment": "Voluntary Home Isolation (contacts)",
+            "id": "intervention_VHI2",
+            "target": {
+                "set": {"idRef": "sourceNodeParticipateInHomeIsolation"}
+            },
+            "foreach": [
+                {
+                    "delay": 3,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "/=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                },
+                {
+                    "delay": 10,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "*=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$comment": "Voluntary Home Quarantine (self)",
+            "id": "intervention_VHQ1",
+            "target": {
+                "set": {"idRef": "targetNodeParticipateInHomeQuarantine"}
+            },
+            "foreach": [
+                {
+                    "delay": 1,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "/=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                },
+                {
+                    "delay": 21,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "*=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "$comment": "Voluntary Home Quarantine (contacts)",
+            "id": "intervention_VHQ2",
+            "target": {
+                "set": {"idRef": "sourceNodeParticipateInHomeQuarantine"}
+            },
+            "foreach": [
+                {
+                    "delay": 1,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "/=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                },
+                {
+                    "delay": 21,
+                    "operations": [
+                        {
+                            "target": {
+                                "edge": {"property": "weight"}
+                            },
+                            "operator": "*=",
+                            "value": {"number": 1000000}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
