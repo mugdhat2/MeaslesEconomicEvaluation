@@ -1,1360 +1,1361 @@
 {
-    "epiHiperSchema": "https://github.com/NSSAC/EpiHiper-Schema/blob/master/schema/diseaseModelSchema.json",
-    "states": [
-        {
-            "id": "S_p",
-            "ann:label": "Susceptible preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 1
-        },
-        {
-            "id": "E_p",
-            "ann:label": "Exposed preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Isymp_p",
-            "ann:label": "Infectious (symptomatic) preschool (0-4)",
-            "infectivity": 1,
-            "susceptibility": 0
-        },
-        {
-            "id": "R_p",
-            "ann:label": "Recovered preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "V_p",
-            "ann:label": "Vaccinated preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Emme_p",
-            "ann:label": "Exposed vaccinated preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Imme_p",
-            "ann:label": "Modified measles infectious preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "S_s",
-            "ann:label": "Susceptible school (5-17)",
-            "infectivity": 0,
-            "susceptibility": 1
-        },
-        {
-            "id": "E_s",
-            "ann:label": "Exposed school (5-17)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Isymp_s",
-            "ann:label": "Infectious (symptomatic) school (5-17)",
-            "infectivity": 1,
-            "susceptibility": 0
-        },
-        {
-            "id": "R_s",
-            "ann:label": "Recovered school (5-17)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "V_s",
-            "ann:label": "Vaccinated school (5-17)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Emme_s",
-            "ann:label": "Exposed vaccinated school (5-17)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Imme_s",
-            "ann:label": "Modified measles infectious school (5-17)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "S_a",
-            "ann:label": "Susceptible adult (18-49)",
-            "infectivity": 0,
-            "susceptibility": 1
-        },
-        {
-            "id": "E_a",
-            "ann:label": "Exposed adult (18-49)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Isymp_a",
-            "ann:label": "Infectious (symptomatic) adult (18-49)",
-            "infectivity": 1,
-            "susceptibility": 0
-        },
-        {
-            "id": "R_a",
-            "ann:label": "Recovered adult (18-49)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "V_a",
-            "ann:label": "Vaccinated adult (18-49)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Emme_a",
-            "ann:label": "Exposed vaccinated adult (18-49)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Imme_a",
-            "ann:label": "Modified measles infectious adult (18-49)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "S_o",
-            "ann:label": "Susceptible older adult (50-64)",
-            "infectivity": 0,
-            "susceptibility": 1
-        },
-        {
-            "id": "E_o",
-            "ann:label": "Exposed older adult (50-64)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Isymp_o",
-            "ann:label": "Infectious (symptomatic) older adult (50-64)",
-            "infectivity": 1,
-            "susceptibility": 0
-        },
-        {
-            "id": "R_o",
-            "ann:label": "Recovered older adult (50-64)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "V_o",
-            "ann:label": "Vaccinated older adult (50-64)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Emme_o",
-            "ann:label": "Exposed vaccinated older adult (50-64)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Imme_o",
-            "ann:label": "Modified measles infectious older adult (50-64)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "S_g",
-            "ann:label": "Susceptible golden-aged (65+)",
-            "infectivity": 0,
-            "susceptibility": 1
-        },
-        {
-            "id": "E_g",
-            "ann:label": "Exposed golden-aged (65+)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Isymp_g",
-            "ann:label": "Infectious (symptomatic) golden-aged (65+)",
-            "infectivity": 1,
-            "susceptibility": 0
-        },
-        {
-            "id": "R_g",
-            "ann:label": "Recovered golden-aged (65+)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "V_g",
-            "ann:label": "Vaccinated golden-aged (65+)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Emme_g",
-            "ann:label": "Exposed vaccinated preschool (0-4)",
-            "infectivity": 0,
-            "susceptibility": 0
-        },
-        {
-            "id": "Imme_g",
-            "ann:label": "Modified measles infectious golden-aged (65+)",
-            "infectivity": 0,
-            "susceptibility": 0
-        }     
-    ],
-    "initialState": "S_p",
-    "transmissions": [
-        {
-            "id": "txm_S_p_to_E_p_by_Isymp_p",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_p",
-            "exitState": "E_p",
-            "contactState": "Isymp_p",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_p_to_E_p_by_Isymp_s",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_p",
-            "exitState": "E_p",
-            "contactState": "Isymp_s",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_p_to_E_p_by_Isymp_a",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_p",
-            "exitState": "E_p",
-            "contactState": "Isymp_a",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_p_to_E_p_by_Isymp_o",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_p",
-            "exitState": "E_p",
-            "contactState": "Isymp_o",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_p_to_E_p_by_Isymp_g",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_p",
-            "exitState": "E_p",
-            "contactState": "Isymp_g",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_s_to_E_s_by_Isymp_p",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_s",
-            "exitState": "E_s",
-            "contactState": "Isymp_p",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_s_to_E_s_by_Isymp_s",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_s",
-            "exitState": "E_s",
-            "contactState": "Isymp_s",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_s_to_E_s_by_Isymp_a",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_s",
-            "exitState": "E_s",
-            "contactState": "Isymp_a",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_s_to_E_s_by_Isymp_o",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_s",
-            "exitState": "E_s",
-            "contactState": "Isymp_o",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_s_to_E_s_by_Isymp_g",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_s",
-            "exitState": "E_s",
-            "contactState": "Isymp_g",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_a_to_E_a_by_Isymp_p",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_a",
-            "exitState": "E_a",
-            "contactState": "Isymp_p",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_a_to_E_a_by_Isymp_s",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_a",
-            "exitState": "E_a",
-            "contactState": "Isymp_s",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_a_to_E_a_by_Isymp_a",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_a",
-            "exitState": "E_a",
-            "contactState": "Isymp_a",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_a_to_E_a_by_Isymp_o",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_a",
-            "exitState": "E_a",
-            "contactState": "Isymp_o",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_a_to_E_a_by_Isymp_g",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_a",
-            "exitState": "E_a",
-            "contactState": "Isymp_g",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_o_to_E_o_by_Isymp_p",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_o",
-            "exitState": "E_o",
-            "contactState": "Isymp_p",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_o_to_E_o_by_Isymp_s",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_o",
-            "exitState": "E_o",
-            "contactState": "Isymp_s",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_o_to_E_o_by_Isymp_a",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_o",
-            "exitState": "E_o",
-            "contactState": "Isymp_a",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_o_to_E_o_by_Isymp_o",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_o",
-            "exitState": "E_o",
-            "contactState": "Isymp_o",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_o_to_E_o_by_Isymp_g",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_o",
-            "exitState": "E_o",
-            "contactState": "Isymp_g",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_g_to_E_g_by_Isymp_p",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_g",
-            "exitState": "E_g",
-            "contactState": "Isymp_p",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_g_to_E_g_by_Isymp_s",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_g",
-            "exitState": "E_g",
-            "contactState": "Isymp_s",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_g_to_E_g_by_Isymp_a",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_g",
-            "exitState": "E_g",
-            "contactState": "Isymp_a",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_g_to_E_g_by_Isymp_o",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_g",
-            "exitState": "E_g",
-            "contactState": "Isymp_o",
-            "transmissibility": 0.5
-        },
-        {
-            "id": "txm_S_g_to_E_g_by_Isymp_g",
-            "ann:label": "Infection (symptomatic)",
-            "entryState": "S_g",
-            "exitState": "E_g",
-            "contactState": "Isymp_g",
-            "transmissibility": 0.5
-        }
-    ],
-    "transitions": [
-        {
-            "id": "E_p_to_Isymp_p",
-            "ann:label": "Infected to Infectious",
-            "entryState": "E_p",
-            "exitState": "Isymp_p",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Isymp_p_to_R_p",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Isymp_p",
-            "exitState": "R_p",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "E_s_to_Isymp_s",
-            "ann:label": "Infected to Infectious",
-            "entryState": "E_s",
-            "exitState": "Isymp_s",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Isymp_s_to_R_s",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Isymp_s",
-            "exitState": "R_s",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "E_a_to_Isymp_a",
-            "ann:label": "Infected to Infectious",
-            "entryState": "E_a",
-            "exitState": "Isymp_a",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Isymp_a_to_R_a",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Isymp_a",
-            "exitState": "R_a",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "E_o_to_Isymp_o",
-            "ann:label": "Infected to Infectious",
-            "entryState": "E_o",
-            "exitState": "Isymp_o",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Isymp_o_to_R_o",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Isymp_o",
-            "exitState": "R_o",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "E_g_to_Isymp_g",
-            "ann:label": "Infected to Infectious",
-            "entryState": "E_g",
-            "exitState": "Isymp_g",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Isymp_g_to_R_g",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Isymp_g",
-            "exitState": "R_g",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-            },
-            {
-            "id": "Emme_p_to_Imme_p",
-            "ann:label": "Infected to Infectious",
-            "entryState": "Emme_p",
-            "exitState": "Imme_p",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Imme_p_to_R_p",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Imme_p",
-            "exitState": "R_p",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Emme_s_to_Imme_s",
-            "ann:label": "Infected to Infectious",
-            "entryState": "Emme_s",
-            "exitState": "Imme_s",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Imme_s_to_R_s",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Imme_s",
-            "exitState": "R_s",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Emme_a_to_Imme_a",
-            "ann:label": "Infected to Infectious",
-            "entryState": "Emme_a",
-            "exitState": "Imme_a",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Imme_a_to_R_a",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Imme_a",
-            "exitState": "R_a",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Emme_o_to_Imme_o",
-            "ann:label": "Infected to Infectious",
-            "entryState": "Emme_o",
-            "exitState": "Imme_o",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Imme_o_to_R_o",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Imme_o",
-            "exitState": "R_o",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Emme_g_to_Imme_g",
-            "ann:label": "Infected to Infectious",
-            "entryState": "Emme_g",
-            "exitState": "Imme_g",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.1,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 9
-                    }
-                ]
-            }
-        },
-        {
-            "id": "Imme_g_to_R_g",
-            "ann:label": "Symptomatic to Recovered",
-            "entryState": "Imme_g",
-            "exitState": "R_g",
-            "probability": 1,
-            "dwellTime": {
-                "discrete": [
-                    {
-                        "probability": 0,
-                        "value": 1
-                    },
-                    {
-                        "probability": 0,
-                        "value": 2
-                    },
-                    {
-                        "probability": 0,
-                        "value": 3
-                    },
-                    {
-                        "probability": 0,
-                        "value": 4
-                    },
-                    {
-                        "probability": 0,
-                        "value": 5
-                    },
-                    {
-                        "probability": 0,
-                        "value": 6
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 7
-                    },
-                    {
-                        "probability": 0.4,
-                        "value": 8
-                    },
-                    {
-                        "probability": 0.3,
-                        "value": 9
-                    }
-                ]
-            }
-        }
-    ]
+  "epiHiperSchema": "https://github.com/NSSAC/EpiHiper-Schema/blob/master/schema/diseaseModelSchema.json",
+  "states": [
+    {
+      "id": "S_p",
+      "ann:label": "Susceptible preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 1
+    },
+    {
+      "id": "E_p",
+      "ann:label": "Exposed preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Isymp_p",
+      "ann:label": "Infectious (symptomatic) preschool (0-4)",
+      "infectivity": 1,
+      "susceptibility": 0
+    },
+    {
+      "id": "R_p",
+      "ann:label": "Recovered preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "V_p",
+      "ann:label": "Vaccinated preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Emme_p",
+      "ann:label": "Exposed vaccinated preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Imme_p",
+      "ann:label": "Modified measles infectious preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "S_s",
+      "ann:label": "Susceptible school (5-17)",
+      "infectivity": 0,
+      "susceptibility": 1
+    },
+    {
+      "id": "E_s",
+      "ann:label": "Exposed school (5-17)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Isymp_s",
+      "ann:label": "Infectious (symptomatic) school (5-17)",
+      "infectivity": 1,
+      "susceptibility": 0
+    },
+    {
+      "id": "R_s",
+      "ann:label": "Recovered school (5-17)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "V_s",
+      "ann:label": "Vaccinated school (5-17)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Emme_s",
+      "ann:label": "Exposed vaccinated school (5-17)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Imme_s",
+      "ann:label": "Modified measles infectious school (5-17)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "S_a",
+      "ann:label": "Susceptible adult (18-49)",
+      "infectivity": 0,
+      "susceptibility": 1
+    },
+    {
+      "id": "E_a",
+      "ann:label": "Exposed adult (18-49)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Isymp_a",
+      "ann:label": "Infectious (symptomatic) adult (18-49)",
+      "infectivity": 1,
+      "susceptibility": 0
+    },
+    {
+      "id": "R_a",
+      "ann:label": "Recovered adult (18-49)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "V_a",
+      "ann:label": "Vaccinated adult (18-49)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Emme_a",
+      "ann:label": "Exposed vaccinated adult (18-49)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Imme_a",
+      "ann:label": "Modified measles infectious adult (18-49)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "S_o",
+      "ann:label": "Susceptible older adult (50-64)",
+      "infectivity": 0,
+      "susceptibility": 1
+    },
+    {
+      "id": "E_o",
+      "ann:label": "Exposed older adult (50-64)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Isymp_o",
+      "ann:label": "Infectious (symptomatic) older adult (50-64)",
+      "infectivity": 1,
+      "susceptibility": 0
+    },
+    {
+      "id": "R_o",
+      "ann:label": "Recovered older adult (50-64)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "V_o",
+      "ann:label": "Vaccinated older adult (50-64)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Emme_o",
+      "ann:label": "Exposed vaccinated older adult (50-64)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Imme_o",
+      "ann:label": "Modified measles infectious older adult (50-64)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "S_g",
+      "ann:label": "Susceptible golden-aged (65+)",
+      "infectivity": 0,
+      "susceptibility": 1
+    },
+    {
+      "id": "E_g",
+      "ann:label": "Exposed golden-aged (65+)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Isymp_g",
+      "ann:label": "Infectious (symptomatic) golden-aged (65+)",
+      "infectivity": 1,
+      "susceptibility": 0
+    },
+    {
+      "id": "R_g",
+      "ann:label": "Recovered golden-aged (65+)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "V_g",
+      "ann:label": "Vaccinated golden-aged (65+)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Emme_g",
+      "ann:label": "Exposed vaccinated preschool (0-4)",
+      "infectivity": 0,
+      "susceptibility": 0
+    },
+    {
+      "id": "Imme_g",
+      "ann:label": "Modified measles infectious golden-aged (65+)",
+      "infectivity": 0,
+      "susceptibility": 0
+    }
+  ],
+  "initialState": "S_p",
+  "transmissions": [
+    {
+      "id": "txm_S_p_to_E_p_by_Isymp_p",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_p",
+      "exitState": "E_p",
+      "contactState": "Isymp_p",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_p_to_E_p_by_Isymp_s",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_p",
+      "exitState": "E_p",
+      "contactState": "Isymp_s",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_p_to_E_p_by_Isymp_a",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_p",
+      "exitState": "E_p",
+      "contactState": "Isymp_a",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_p_to_E_p_by_Isymp_o",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_p",
+      "exitState": "E_p",
+      "contactState": "Isymp_o",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_p_to_E_p_by_Isymp_g",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_p",
+      "exitState": "E_p",
+      "contactState": "Isymp_g",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_s_to_E_s_by_Isymp_p",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_s",
+      "exitState": "E_s",
+      "contactState": "Isymp_p",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_s_to_E_s_by_Isymp_s",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_s",
+      "exitState": "E_s",
+      "contactState": "Isymp_s",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_s_to_E_s_by_Isymp_a",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_s",
+      "exitState": "E_s",
+      "contactState": "Isymp_a",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_s_to_E_s_by_Isymp_o",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_s",
+      "exitState": "E_s",
+      "contactState": "Isymp_o",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_s_to_E_s_by_Isymp_g",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_s",
+      "exitState": "E_s",
+      "contactState": "Isymp_g",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_a_to_E_a_by_Isymp_p",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_a",
+      "exitState": "E_a",
+      "contactState": "Isymp_p",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_a_to_E_a_by_Isymp_s",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_a",
+      "exitState": "E_a",
+      "contactState": "Isymp_s",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_a_to_E_a_by_Isymp_a",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_a",
+      "exitState": "E_a",
+      "contactState": "Isymp_a",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_a_to_E_a_by_Isymp_o",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_a",
+      "exitState": "E_a",
+      "contactState": "Isymp_o",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_a_to_E_a_by_Isymp_g",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_a",
+      "exitState": "E_a",
+      "contactState": "Isymp_g",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_o_to_E_o_by_Isymp_p",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_o",
+      "exitState": "E_o",
+      "contactState": "Isymp_p",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_o_to_E_o_by_Isymp_s",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_o",
+      "exitState": "E_o",
+      "contactState": "Isymp_s",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_o_to_E_o_by_Isymp_a",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_o",
+      "exitState": "E_o",
+      "contactState": "Isymp_a",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_o_to_E_o_by_Isymp_o",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_o",
+      "exitState": "E_o",
+      "contactState": "Isymp_o",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_o_to_E_o_by_Isymp_g",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_o",
+      "exitState": "E_o",
+      "contactState": "Isymp_g",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_g_to_E_g_by_Isymp_p",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_g",
+      "exitState": "E_g",
+      "contactState": "Isymp_p",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_g_to_E_g_by_Isymp_s",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_g",
+      "exitState": "E_g",
+      "contactState": "Isymp_s",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_g_to_E_g_by_Isymp_a",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_g",
+      "exitState": "E_g",
+      "contactState": "Isymp_a",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_g_to_E_g_by_Isymp_o",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_g",
+      "exitState": "E_g",
+      "contactState": "Isymp_o",
+      "transmissibility": 1.0
+    },
+    {
+      "id": "txm_S_g_to_E_g_by_Isymp_g",
+      "ann:label": "Infection (symptomatic)",
+      "entryState": "S_g",
+      "exitState": "E_g",
+      "contactState": "Isymp_g",
+      "transmissibility": 1.0
+    }
+  ],
+  "transitions": [
+    {
+      "id": "E_p_to_Isymp_p",
+      "ann:label": "Infected to Infectious",
+      "entryState": "E_p",
+      "exitState": "Isymp_p",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Isymp_p_to_R_p",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Isymp_p",
+      "exitState": "R_p",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "E_s_to_Isymp_s",
+      "ann:label": "Infected to Infectious",
+      "entryState": "E_s",
+      "exitState": "Isymp_s",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Isymp_s_to_R_s",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Isymp_s",
+      "exitState": "R_s",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "E_a_to_Isymp_a",
+      "ann:label": "Infected to Infectious",
+      "entryState": "E_a",
+      "exitState": "Isymp_a",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Isymp_a_to_R_a",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Isymp_a",
+      "exitState": "R_a",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "E_o_to_Isymp_o",
+      "ann:label": "Infected to Infectious",
+      "entryState": "E_o",
+      "exitState": "Isymp_o",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Isymp_o_to_R_o",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Isymp_o",
+      "exitState": "R_o",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "E_g_to_Isymp_g",
+      "ann:label": "Infected to Infectious",
+      "entryState": "E_g",
+      "exitState": "Isymp_g",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Isymp_g_to_R_g",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Isymp_g",
+      "exitState": "R_g",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emme_p_to_Imme_p",
+      "ann:label": "Infected to Infectious",
+      "entryState": "Emme_p",
+      "exitState": "Imme_p",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Imme_p_to_R_p",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Imme_p",
+      "exitState": "R_p",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emme_s_to_Imme_s",
+      "ann:label": "Infected to Infectious",
+      "entryState": "Emme_s",
+      "exitState": "Imme_s",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Imme_s_to_R_s",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Imme_s",
+      "exitState": "R_s",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emme_a_to_Imme_a",
+      "ann:label": "Infected to Infectious",
+      "entryState": "Emme_a",
+      "exitState": "Imme_a",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Imme_a_to_R_a",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Imme_a",
+      "exitState": "R_a",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emme_o_to_Imme_o",
+      "ann:label": "Infected to Infectious",
+      "entryState": "Emme_o",
+      "exitState": "Imme_o",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Imme_o_to_R_o",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Imme_o",
+      "exitState": "R_o",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emme_g_to_Imme_g",
+      "ann:label": "Infected to Infectious",
+      "entryState": "Emme_g",
+      "exitState": "Imme_g",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0.1,
+            "value": 6
+          },
+          {
+            "probability": 0.1,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.4,
+            "value": 9
+          }
+        ]
+      }
+    },
+    {
+      "id": "Imme_g_to_R_g",
+      "ann:label": "Symptomatic to Recovered",
+      "entryState": "Imme_g",
+      "exitState": "R_g",
+      "probability": 1,
+      "dwellTime": {
+        "discrete": [
+          {
+            "probability": 0,
+            "value": 1
+          },
+          {
+            "probability": 0,
+            "value": 2
+          },
+          {
+            "probability": 0,
+            "value": 3
+          },
+          {
+            "probability": 0,
+            "value": 4
+          },
+          {
+            "probability": 0,
+            "value": 5
+          },
+          {
+            "probability": 0,
+            "value": 6
+          },
+          {
+            "probability": 0.3,
+            "value": 7
+          },
+          {
+            "probability": 0.4,
+            "value": 8
+          },
+          {
+            "probability": 0.3,
+            "value": 9
+          }
+        ]
+      }
+    }
+  ],
+  "transmissibility": 1.0
 }
