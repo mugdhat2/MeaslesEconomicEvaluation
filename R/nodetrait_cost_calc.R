@@ -5,8 +5,8 @@ require(data.table)
 setwd("/project/bii_nssac/COVID-19_USA_EpiHiper/rivanna/20220707-measles/exp1/")
 filelist = list.files(getwd(), recursive = T, full.names = T)
 filelist <<- grep("nodeTrait.log", filelist, value = T)
-pt_cost = fread("/project/biocomplexity/mat3kk/pid_homestay_cost_econ_eval.csv")
-pt_cost <<- set_names(pt_cost$home_stay_cost_per_day, pt_cost$pid)
+# pt_cost = fread("/project/biocomplexity/mat3kk/pid_homestay_cost_econ_eval.csv")
+# pt_cost <<- set_names(pt_cost$home_stay_cost_per_day, pt_cost$pid)
 
 read_plus <- function(flnm) {
   df <- fread(flnm, stringsAsFactors = F, colClasses = c("integer", "character", "character")) 
@@ -31,11 +31,15 @@ read_plus <- function(flnm) {
   
 }
 
-experiment_nodetrait <- function(n){
-  
+experiment_nodetrait <- function(n, j){
   
   tbl_with_sources <-
-    bind_rows(lapply(((n-1)*300+1):300*n, function(i){read_plus(filelist[i])}))
+    bind_rows(lapply(((n-1)*10+1+(j-1)*10):((10*n)+(j-1)*10), function(i){read_plus(filelist[i])}))
+  
+ # tbl_with_sources <-
+  #  bind_rows(lapply(((n-1)*300+1):((n-1)*300+10), function(i){read_plus(filelist[i])}))
+  
+  print(n)
   
   test <- tbl_with_sources %>% 
     group_by(filename, pid) %>% 
@@ -44,7 +48,7 @@ experiment_nodetrait <- function(n){
   test$t_out = sapply(test$`stayhome:false`, sum)
   test$`stayhome:in_isolation` = sapply(test$`stayhome:in_isolation`, sum)
   test$`stayhome:in_quarantine` = sapply(test$`stayhome:in_quarantine`, sum)  
-  test$t_in = rowSums(test[, 3:4])
+  test$t_in = test$`stayhome:in_isolation` + test$`stayhome:in_quarantine`
   
   test<- test %>% 
     ungroup() %>% 
@@ -54,12 +58,12 @@ experiment_nodetrait <- function(n){
   return(test)
 }
 
-
-for(i in 1:30 ){
+for(i in 239:240 ){
   gc()
-  test <- experiment_nodetrait(i) 
-  write.csv(test,paste0("/project/biocomplexity/mat3kk/Measles_run/EconEval/nodetrait_cost_", i, ".csv"), row.names = F)
+  for(j in 1:3){
+  test <- experiment_nodetrait(i,j) 
+  write.csv(test,paste0("/project/biocomplexity/mat3kk/Measles_run/EconEval/splitup_nodeTrait/nodetrait_cost_", i, "_", j, ".csv"), row.names = F)
   rm(test)
-  print(i) 
+  print(paste(i,j)) }
 }
 
